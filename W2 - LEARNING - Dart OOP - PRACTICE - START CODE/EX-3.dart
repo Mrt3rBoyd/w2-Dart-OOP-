@@ -1,59 +1,18 @@
-class MyDuration {
-  //   // Display the duration in a readable format
-  //   @override
-  //   String toString() {
-  //     int seconds = (_milliseconds / 1000).round();
-  //     int minutes = (seconds / 60).floor();
-  //     seconds = seconds % 60;
-  //     int hours = (minutes / 60).floor();
-  //     minutes = minutes % 60;
-  //     return '$hours hours, $minutes minutes, $seconds seconds';
-  //   }
-  // }
+class Duration {
+  int _milliseconds = 0;
+  int hours;
+  int minutes;
+  int seconds;
 
-  int _milliseconds;
-
-  MyDuration(this._milliseconds);
-  MyDuration.fromHours(int hours) : _milliseconds = hours ;
-  MyDuration.fromMinutes(int minutes) : _milliseconds = minutes;
-
-  MyDuration operator +(MyDuration other) {
-    return MyDuration();
-  }
-
-  MyDuration operator -(MyDuration other) {
-    return MyDuration();
-  }
-
-  @override
-  bool operator ==(Object other) {
-    
-    return super == other;
-  }
+  Duration(this._milliseconds, this.hours, this.minutes, this.seconds);
 }
 
-// void main() {
-//   MyDuration duration1 = MyDuration.fromHours(3); // 3 hours
-//   MyDuration duration2 = MyDuration.fromMinutes(45); // 45 minutes
-//   print(duration1 + duration2); // 3 hours, 45 minutes, 0 seconds
-//   print(duration1>duration2); //true
+void main() {
+  Duration duration1;
+  Duration duration2;
 
-//   try {
-//     print(duration2 - duration1); // This will throw an exception
-//   } catch (e) {
-//     print(e);
-//   }
+  print duration1 + duration2;
 
-main() {
-  MyDuration duration1 = MyDuration.fromHours(3);
-  MyDuration duration2 = MyDuration.fromMinutes(45);
+    
 
-  print(duration1 + duration2);
-  print(duration1 != duration2);
-
-  try {
-    print(duration2 - duration1);
-  } catch (e) {
-    print(e);
-  }
 }
