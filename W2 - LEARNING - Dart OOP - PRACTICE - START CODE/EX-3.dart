@@ -14,15 +14,15 @@ class MyDuration {
   int _milliseconds;
 
   MyDuration(this._milliseconds);
-  MyDuration.fromHours(int hours) : _milliseconds = hours * 60 * 60 * 1000;
-  MyDuration.fromMinutes(int minutes) : _milliseconds = minutes * 60 * 1000;
+  MyDuration.fromHours(int hours) : _milliseconds = hours ;
+  MyDuration.fromMinutes(int minutes) : _milliseconds = minutes;
 
   MyDuration operator +(MyDuration other) {
-    return MyDuration(this._milliseconds + other._milliseconds);
+    return MyDuration();
   }
 
   MyDuration operator -(MyDuration other) {
-    return MyDuration(this._milliseconds - other._milliseconds);
+    return MyDuration();
   }
 
   @override
